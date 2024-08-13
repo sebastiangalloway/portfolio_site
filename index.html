@@ -1,432 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sebastian Galloway</title>
+    <meta content="Sebastian's Portfolio Website" name="description" />
+    <meta content="" name="keywords" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Sebastian Galloway</title>
-  <meta content="Sebastian's Portfolio Website" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/websitelogo.webp" rel="icon" />
+    <link href="assets/img/websitelogo.webp" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/websitelogo.webp" rel="icon">
-  <link href="assets/img/websitelogo.webp" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
+    <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
   * Updated: Jun 29 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+  </head>
 
-<body class="index-page">
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <body class="index-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <div class="profile-img">
-      <img src="assets/img/profileimage.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Sebastian Galloway</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://github.com/sebastiangalloway/" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/sebastiangalloway/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-background.jpeg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Sebastian Galloway</h2>
-        <p>I am a <span class="typed" data-typed-items="Student, Teacher, Developer, Software Engineer">Software Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      <div class="profile-img">
+        <img
+          src="assets/img/profileimage.jpg"
+          alt=""
+          class="img-fluid rounded-circle"
+        />
       </div>
 
-    </section><!-- /Hero Section -->
+      <a
+        href="index.html"
+        class="logo d-flex align-items-center justify-content-center"
+      >
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Sebastian Galloway</h1>
+      </a>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+      <div class="social-links text-center">
+        <a href="https://github.com/sebastiangalloway/" class="github"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/sebastiangalloway/"
+          class="linkedin"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+      </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
-          &emsp;&emsp; I am Sebastian Galloway, a dedicated and innovative Computer Science student at Florida International University, set to graduate in December 2024. As a Software Engineering Fellow at <a href="https://headstarter.co/">HeadStarter AI</a>, I am deepening my skills in artificial intelligence and software engineering by collaborating with industry leaders on cutting-edge projects. My involvement in <a href="https://www.codepath.org/">CodePath's</a> Technical Interview Prep pathway has sharpened my ability to solve challenging algorithmic problems and excel in technical interviews, while my participation in <a href="https://www.colorstack.org/">ColorStack</a> fuels my commitment to diversity and inclusion in tech, aiming to increase the representation of Black and Latinx students in computing.
-        </p>
-        <p>
-          &emsp;&emsp; At <a href="https://www.codeninjas.com/">Code Ninjas</a> and <a href="https://www.gen2050.com/">Gen2050</a>, I led summer enrichment programs and afterschool classes as a Robotics/Coding Instructor, nurturing creativity and problem-solving skills in young learners. My academic journey at Florida International University includes comprehensive coursework in software engineering, artificial intelligence, and database management, providing a strong foundation in computer science. Through projects like a machine learning stock predictor, stock analytics dashboard, and a cancer treatment outcome prediction tool, I have applied my theoretical knowledge to real-world applications. Passionate about embracing new challenges, I thrive in diverse communities and enjoy supporting others in their journeys, committed to making a positive impact in the tech industry and beyond.
-        </p>      
-      </div><!-- End Section Title -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#hero" class="active"
+              ><i class="bi bi-house navicon"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+          </li>
+          <li>
+            <a href="#resume"
+              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio"
+              ><i class="bi bi-images navicon"></i> Portfolio</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <img
+          src="assets/img/hero-background.jpeg"
+          alt=""
+          data-aos="fade-in"
+          class=""
+        />
 
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profileimage.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Aspiring Software &amp; AI Engineer.</h2>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Miami, Florida, USA</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor's of Computer Science @ FIU</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Graduation:</strong> <span>December 2024</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Interests:</strong> <span>Mental Health, Psychology, Artificial Intelligence, Machine Learning, Finance, and Robotics</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Unavailable</span></li>
-                </ul>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <h2>Sebastian Galloway</h2>
+          <p>
+            I am a
+            <span
+              class="typed"
+              data-typed-items="Student, Teacher, Developer, Software Engineer"
+              >Software Engineer</span
+            ><span
+              class="typed-cursor typed-cursor--blink"
+              aria-hidden="true"
+            ></span
+            ><span
+              class="typed-cursor typed-cursor--blink"
+              aria-hidden="true"
+            ></span>
+          </p>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Me</h2>
+          <p>
+            &emsp;&emsp; I am Sebastian Galloway, a dedicated and innovative
+            Computer Science student at Florida International University, set to
+            graduate in December 2024. As a Software Engineering Fellow at
+            <a href="https://headstarter.co/">HeadStarter AI</a>, I am deepening
+            my skills in artificial intelligence and software engineering by
+            collaborating with industry leaders on cutting-edge projects. My
+            involvement in
+            <a href="https://www.codepath.org/">CodePath's</a> Technical
+            Interview Prep pathway has sharpened my ability to solve challenging
+            algorithmic problems and excel in technical interviews, while my
+            participation in
+            <a href="https://www.colorstack.org/">ColorStack</a> fuels my
+            commitment to diversity and inclusion in tech, aiming to increase
+            the representation of Black and Latinx students in computing.
+          </p>
+          <p>
+            &emsp;&emsp; At
+            <a href="https://www.codeninjas.com/">Code Ninjas</a> and
+            <a href="https://www.gen2050.com/">Gen2050</a>, I led summer
+            enrichment programs and afterschool classes as a Robotics/Coding
+            Instructor, nurturing creativity and problem-solving skills in young
+            learners. My academic journey at Florida International University
+            includes comprehensive coursework in software engineering,
+            artificial intelligence, and database management, providing a strong
+            foundation in computer science. Through projects like a machine
+            learning stock predictor, stock analytics dashboard, and a cancer
+            treatment outcome prediction tool, I have applied my theoretical
+            knowledge to real-world applications. Passionate about embracing new
+            challenges, I thrive in diverse communities and enjoy supporting
+            others in their journeys, committed to making a positive impact in
+            the tech industry and beyond.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4">
+              <img src="assets/img/profileimage.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-8 content">
+              <h2>Aspiring Software &amp; AI Engineer.</h2>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>City:</strong> <span>Miami, Florida, USA</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Degree:</strong>
+                      <span>Bachelor's of Computer Science @ FIU</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Graduation:</strong> <span>December 2024</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Interests:</strong>
+                      <span
+                        >Mental Health, Psychology, Artificial Intelligence,
+                        Machine Learning, Finance, and Robotics</span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Freelance:</strong> <span>Unavailable</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Skills</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row skills-content skills-animation">
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>Python</span> <i class="val">100%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>Java</span> <i class="val">75%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>JavaScript/TypeScript</span>
+                  <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>C</span> <i class="val">65%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="65"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+            </div>
+
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>C#</span> <i class="val">75%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>HTML/CSS</span> <i class="val">90%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>SQL</span> <i class="val">55%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="55"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>GIT</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+            </div>
           </div>
         </div>
 
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Java</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript/TypeScript</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-            
-            <div class="progress">
-              <span class="skill"><span>C</span> <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>C#</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>HTML/CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>SQL</span> <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>GIT</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
+        <div class="container" data-aos="fade-up">
+          <h5>Additional Skills:</h5>
+          <p>
+            <strong>Additional Technical Skills: </strong> React, AI/ ML
+            Libraries, REST API's, Angular, and Node.js
+          </p>
+          <p>
+            <strong>Tools: </strong>Unity, Arduino, Linux, Unix, Excel,
+            PostgreSQL, and MongoDB
+          </p>
+          <p>
+            <strong>Soft Skills: </strong> Communication, Coachability,
+            Collaboration, Adaptability, and Leadership
+          </p>
         </div>
+        <!-- End Addiional Skills -->
+      </section>
+      <!-- /Skills Section -->
 
-      </div>
+      <!-- Resume Section -->
+      <section id="resume" class="resume section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Resume</h2>
+        </div>
+        <!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up">
-        <h5>Additional Skills:</h5>
-        <p><strong>Additional Technical Skills: </strong> React, AI/ ML Libraries, Rest API's, Angular, and Node.js</p>
-        <p><strong>Tools: </strong>Unity, Arduino, Linux, Unix, Excel, and MongoDB</p>
-        <p><strong>Soft Skills: </strong> Communication, Coachability, Collaboration, Adaptability, and Leadership</p>
-      </div><!-- End Addiional Skills -->
-    </section><!-- /Skills Section -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Summary</h3>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+              <div class="resume-item pb-0">
+                <h4>Sebastian Galloway</h4>
+                <p>
+                  <em
+                    >Computer Science student and educator with a solid
+                    understanding of foundational concepts related to
+                    information and communication technology. I am enthusiastic
+                    about leveraging my knowledge, experience, and communication
+                    skills to make positive contributions to future team
+                    members.</em
+                  >
+                </p>
+                <ul>
+                  <li>Miami, FL</li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor's of Computer Science</h4>
+                <p><em>Florida International University</em></p>
+                <p><em>Miami Florida</em></p>
+                <h5>2019 - Current</h5>
+                <p>Notable Courses:</p>
+                <ul>
+                  <li>Human Computer Interactions</li>
+                  <li>Quantum Computing</li>
+                  <li>Artificial Intelligence</li>
+                  <li>Software Engineering 1 & 2</li>
+                  <li>Data Structures</li>
+                  <li>Database Management</li>
+                  <li>Software Testing</li>
+                  <li>Net Centric Computing</li>
+                  <li>Operating Systems Principles</li>
+                  <li>Discrete Structures</li>
+                  <li>Programming 1 & 2</li>
+                  <li>Computer Architecture</li>
+                  <li>Principles of Programming Languages</li>
+                  <li>Logic for Computer Science</li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+              <h3 class="resume-title">Organizations</h3>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Sebastian Galloway</h4>
-              <p><em>Computer Science student and educator with a solid understanding of foundational concepts related to information and communication technology. I am enthusiastic about leveraging my knowledge, experience, and communication skills to make positive contributions to future team members.</em></p>
-              <ul>
-                <li>Miami, FL</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor's of Computer Science</h4>
-              <p><em>Florida International University, Miami Florida</em></p>
-              <h5>2019 - Current</h5>
-              <p>Notable Courses:</p>
-              <ul>
-                <li>Human Computer Interactions</li>
-                <li>Quantum Computing</li>
-                <li>Artificial Intelligence</li>
-                <li>Software Engineering 1 & 2</li>
-                <li>Data Structures</li>
-                <li>Database Management</li>
-                <li>Software testing</li>
-                <li>Net Centric Computing</li>
-                <li>Operating Systems Priciples</li>
-                <li>Discrete Structures</li>
-                <li>Programming 1 & 2</li>
-                <li>Computer Architecture</li>
-                <li>Discrete Structures</li>
-                <li>Principles of Programming Languages</li>
-                <li>Logic for Computer Science</li>
-              </ul>
-
-              
-            </div><!-- Edn Resume Item -->
-            <h3 class="resume-title">Organizations</h3>
-
-            <div class="resume-item">
-              <h4>CodePath Member</h4>
+              <div class="resume-item">
+                <h4>CodePath Member</h4>
                 <p><em>- Technical Interview Prep Program 101</em></p>
-              <h4>HeadStarter AI Member</h4>
+                <h4>HeadStarter AI Member</h4>
                 <p><em>- Summer 2024 Fellowship</em></p>
-              <h4>ColorStack Member</h4>
+                <h4>ColorStack Member</h4>
                 <p></p>
-              <h4>FIU INIT Member</h4>              
-            </div><!-- Edn Resume Item -->
+                <h4>FIU INIT Member</h4>
+              </div>
+              <!-- Edn Resume Item -->
+            </div>
 
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Fulltime Robotics & Coding Instructor</h4>
+                <p><em>Code Ninjas, Sagemont Elementary, & NSU University School</em></p>
+                <p><em>Weston, FL </em></p>
+                <h5>August 2023 - Present</h5>
+                <ul>
+                  <li>
+                    Led 8-week summer enrichment program on robotics, scripting,
+                    algorithms, and programming fundamentals through the use of
+                    Roblox Studio Lua scripting, Microsoft MakeCode, Lego Spike
+                    robotics, and Minecraft Modding.
+                  </li>
+                  <li>
+                    Educated 15 classes of students (pre-K to 5th grade) on
+                    coding, engineering, and software development at Sagemont
+                    Preparatory School, utilizing Vex robotics kits (Vex 123,
+                    Vex Go, Vex IQ), Sphero, VexCode VR, and TinkerCAD.
+                  </li>
+                  <li>
+                    Developed and delivered engaging curricula on Spheros,
+                    information technology, and coding fundamentals for an
+                    elementary group at NSU University School's afterschool
+                    program, boosting student interest and proficiency in coding
+                    principles.
+                  </li>
+                  <li>
+                    Guided students aged 5-18 at Code Ninjas Weston in game
+                    development and programming, fostering creativity and
+                    problem- solving using C#, JavaScript, Unity, Python, Roblox
+                    Studio, Scratch Jr, Microsoft MakeCode, and Sphero.
+                  </li>
+                  <li>
+                    Co-Coached Sagemont’s Elementary robotics team, the Lion
+                    Innovators, where we participated in two robotics
+                    competitions
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>Freelance Web Developer</h4>
+                <p><em>Miami, FL</em></p>
+                <h5>September 2022 - August 2023</h5>
+                <ul>
+                  <li>
+                    Built Party on a Budget, a digital marketplace for party
+                    supplies and services using HTML, CSS, JavaScript.
+                  </li>
+                  <li>
+                    Created Wix website for Haitian Non-Profit foundation Zoe
+                    Vision to help provide students with opportunity to higher
+                    education.
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>STEM Youth Instructor</h4>
+                <p><em>GEN2050</em></p>
+                <p><em>Miami, FL</em></p>
+                <h5>September 2022 - August 2023</h5>
+                <ul>
+                  <li>
+                    Successfully delivered science, technology, engineering,
+                    arts, and math curriculum to middle-school and high-school
+                    students.
+                  </li>
+                  <li>
+                    Taught students about fundamental programming concepts using
+                    the MIT Scratch coding language and Arduino microcontroller
+                    hardware resulting in interactive projects including
+                    quizzes, puzzles, and games.
+                  </li>
+                  <li>
+                    Conducted weekly field trips geared towards inspiring 25-45
+                    students' interest in STEM topics through hands-on
+                    experiments.
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+            </div>
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Fulltime Robotics & Coding Instructor</h4>
-              <p><em>Code Ninjas, Sagemont Elementary, & NSU University School</em></p>
-              <p><em>Weston, FL </em></p>
-              <h5>August 2023 - Present</h5>
-              <ul>
-                <li>Led 8-week summer enrichment program on robotics, scripting, algorithms, and programming fundamentals through the use of
-                    Roblox Studio Lua scripting, Microsoft MakeCode, Lego Spike robotics, and Minecraft Modding.</li>
-                <li>Educated 15 classes of students (pre-K to 5th grade) on coding, engineering, and software development at Sagemont
-                    Preparatory School, utilizing Vex robotics kits (Vex 123, Vex Go, Vex IQ), Sphero, VexCode VR, and TinkerCAD.</li>
-                <li>Developed and delivered engaging curricula on Spheros, information technology, and coding fundamentals for an elementary
-                    group at NSU University School's afterschool program, boosting student interest and proficiency in coding principles.</li>
-                <li>Guided students aged 5-18 at Code Ninja Weston in game development and programming, fostering creativity and problem-
-                    solving using C#, JavaScript, Unity, Python, Roblox Studio, Scratch Jr, Microsoft MakeCode, and Sphero.</li>
-                <li>Co-Coached Sagemont’s Elementary robotics team, the Lion Innovators, where we participated in two robotics competitions</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Freelance Web Developer</h4>
-              <p><em>Miami, FL</em></p>
-              <h5>September 2022 - August 2023</h5>
-              <ul>
-                <li>Built Party on a Budget, a digital marketplace for party supplies and services using HTML, CSS, JavaScript.</li>
-                <li>Created Wix website for Haitian Non-Profit foundation Zoe Vision to help provide students with opportunity to higher education.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>STEM Youth Instructor</h4>
-              <p><em>GEN2050</em></p>
-              <p><em>Miami, FL</em></p>
-              <h5>September 2022 - August 2023</h5>
-              <ul>
-                <li>Successfully delivered science, technology, engineering, arts, and math curriculum to middle-school and high-school students.</li>
-                <li>Taught students about fundamental programming concepts using the MIT Scratch coding language and Arduino microcontroller
-                    hardware resulting in interactive projects including quizzes, puzzles, and games.</li>
-                <li>Conducted weekly field trips geared towards inspiring 25-45 students' interest in STEM topics through hands-on experiments.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
         </div>
+      </section>
+      <!-- /Resume Section -->
 
-      </div>
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>Below are some projects that I am proud of.</p>
+        </div>
+        <!-- End Section Title -->
 
-    </section><!-- /Resume Section -->
+        <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-apps">Apps</li>
+              <li data-filter=".filter-certificates">Certificates</li>
+              <li data-filter=".filter-events">Events</li>
+              <li data-filter=".filter-awards">Awards</li>
+            </ul>
+            <!-- End Portfolio Filters -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/stockdashboardss.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Stock Dashboard</h4>
+                    <p>A tool for quick and easy stock analysis.</p>
+                    <a
+                      href="assets/img/portfolio/stockdashboardss.png"
+                      title="Stock App"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://github.com/sebastiangalloway/streamlit_stock_app"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Below are some projects that I am proud of.</p>
-      </div><!-- End Section Title -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/weatherappss.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Weather App</h4>
+                    <p>A tool for easy access to weather information.</p>
+                    <a
+                      href="assets/img/portfolio/weatherappss.png"
+                      title="Weather App"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://github.com/sebastiangalloway/weatherAppApi"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/mlstockpredictorss.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>ML Stock Predictor (In progress)</h4>
+                    <p>A tool for predicting future performance of stocks.</p>
+                    <a
+                      href="assets/img/portfolio/mlstockpredictorss.png"
+                      title="Stock ML APP"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://github.com/sebastiangalloway/MLstockpredictor"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
       <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-apps">Apps</li>
-            <li data-filter=".filter-certificates">Certificates</li>
-            <li data-filter=".filter-events">Events</li>
-            <li data-filter=".filter-awards">Awards</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/stockdashboardss.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Stock Dashboard</h4>
-                  <p>A tool for quick and easy stock analysis.</p>
-                  <a href="assets/img/portfolio/stockdashboardss.png" title="Stock App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/sebastiangalloway/streamlit_stock_app" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/weatherappss.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Weather App</h4>
-                  <p>A tool for easy access to weather information.</p>
-                  <a href="assets/img/portfolio/weatherappss.png" title="Weather App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/sebastiangalloway/weatherAppApi" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/mlstockpredictorss.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>ML Stock Predictor (In progress)</h4>
-                  <p>A tool for predicting future performance of stocks.</p>
-                  <a href="assets/img/portfolio/mlstockpredictorss.png" title="Stock ML APP" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/sebastiangalloway/MLstockpredictor" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Sebastian Galloway</strong>
+            <span>All Rights Reserved</span>
+          </p>
         </div>
-
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Powered by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
       </div>
+    </footer>
 
-    </section><!-- /Portfolio Section -->
-  </main>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <footer id="footer" class="footer position-relative light-background">
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Sebastian Galloway</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Powered by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
