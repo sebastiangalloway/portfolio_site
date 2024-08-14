@@ -649,8 +649,22 @@ section,
 }
 
 .about-table tr {
-    height: 50px; /* Adjust this value to increase or decrease spacing */
-    vertical-align: top; /* Aligns content to the top of each row */
+    white-space: nowrap;         /* Prevents text from wrapping to a new line */
+    vertical-align: top;
+    height: 50px;
+}
+
+.about-table td:last-child {
+    display: block;              /* Ensures long content in the last column can wrap */
+    white-space: normal;         /* Allows wrapping for longer text in the last column */
+}
+
+
+@media (max-width: 575px) {
+    .about-table td {
+        font-size: 14px; /* Adjusts font size for smaller screens */
+        white-space: nowrap; /* Ensures content doesn't wrap */
+    }
 }
 
 
