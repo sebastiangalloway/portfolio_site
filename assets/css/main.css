@@ -648,10 +648,8 @@ section,
   line-height: 0;
 }
 
-.about-table tr {
+.about-table td {
     white-space: nowrap;         /* Prevents text from wrapping to a new line */
-    vertical-align: top;
-    height: 50px;
 }
 
 .about-table td:last-child {
