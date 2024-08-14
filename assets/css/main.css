@@ -648,6 +648,14 @@ section,
   line-height: 0;
 }
 
+.about-table tr {
+    height: 50px; /* Adjust this value to increase or decrease spacing */
+    vertical-align: top; /* Aligns content to the top of each row */
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
