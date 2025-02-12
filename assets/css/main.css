@@ -847,6 +847,10 @@ section,
 
 .portfolio .portfolio-content img {
   transition: 0.3s;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures images are uniformly displayed */
+  aspect-ratio: 1/1; /* Adjust this based on the others */
 }
 
 .portfolio .portfolio-content .portfolio-info {
