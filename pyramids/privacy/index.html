@@ -51,19 +51,40 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: June 20, 2026</p>
+    <p class="updated">Last updated: July 8, 2026</p>
 
     <div class="card">
       <h2>The short version</h2>
       <p class="lede">Pyramids is built to respect your privacy.</p>
       <ul>
         <li>We do <strong>not</strong> collect, sell, or share your personal data.</li>
-        <li>There are <strong>no</strong> ads, <strong>no</strong> analytics or tracking SDKs, and <strong>no</strong> user accounts.</li>
-        <li>Your tasks, progress, and settings are stored <strong>only on your device</strong>.</li>
+        <li>There are <strong>no</strong> ads, <strong>no</strong> analytics or behavior-tracking SDKs, and <strong>no</strong> user accounts.</li>
+        <li>Your tasks, progress, and settings live <strong>on your device</strong>. A small slice of your game progress can be backed up to <strong>your own iCloud</strong> — it goes to your Apple storage, never to us.</li>
+        <li>Purchases are handled by <strong>Apple</strong> and our purchase provider <strong>RevenueCat</strong> — the only data that ever leaves your device, and only when you choose to buy or restore.</li>
       </ul>
 
       <h2>What's stored on your device</h2>
       <p>The app keeps your tasks, completed-task history ("bricks"), level, coins, streaks, shop items, and settings locally on your device. This data is not transmitted to us. If you delete the app, this data is removed with it.</p>
+
+      <h2>iCloud backup</h2>
+      <p>So a new phone or a reinstall doesn't wipe out progress you've earned or paid for, the app backs up a small slice of your game state — your coins, owned shop items, streaks, and gem balance — to <strong>your own private iCloud</strong> using Apple's iCloud Key-Value Store.</p>
+      <ul>
+        <li>This uses the iCloud account already signed in on your device. There is <strong>no separate account</strong>, sign-up, or password.</li>
+        <li>The data is stored in <strong>your</strong> Apple iCloud storage, governed by Apple's privacy policy. It <strong>never reaches our servers</strong> — we cannot see it.</li>
+        <li>It is not medical, personal, or contact information — only in-game economy values.</li>
+        <li>If iCloud is signed out or unavailable, the app works exactly the same using its local copy; the backup is best-effort.</li>
+        <li><strong>Clear App Data</strong> in Settings erases this backup along with your local data (your gem balance is deliberately preserved, since gems are purchased value).</li>
+      </ul>
+
+      <h2>Purchases (Pyramids Plus &amp; gems)</h2>
+      <p>Pyramids offers optional in-app purchases — the <strong>Pyramids Plus</strong> subscription and <strong>gem</strong> packs. Everything the app did before remains free; purchases only add to it.</p>
+      <ul>
+        <li>All payments are processed by <strong>Apple</strong> through the App Store. We never see or receive your payment-card details.</li>
+        <li>To unlock what you've bought and keep it working across your devices and reinstalls, the app uses <strong>RevenueCat</strong>, a subscription-management service. When you make or restore a purchase, RevenueCat receives a randomly generated app-user identifier, your App Store purchase receipt, and basic device/app information needed to validate the purchase.</li>
+        <li>This identifier is <strong>not</strong> linked to your name, email, or Apple ID, and is used only to manage entitlements — <strong>not</strong> for advertising or cross-app tracking.</li>
+        <li>RevenueCat's handling of this data is governed by <a href="https://www.revenuecat.com/privacy">RevenueCat's own privacy policy</a>; Apple's handling is governed by Apple's privacy policy.</li>
+        <li>We do not operate our own server in this flow and store none of this data ourselves.</li>
+      </ul>
 
       <h2>Notifications</h2>
       <p>If you enable reminders, the app schedules <strong>local</strong> notifications on your device (daily nudges, streak reminders, and mindfulness prompts). These are generated on-device and are not sent through our servers.</p>
