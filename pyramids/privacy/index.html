@@ -51,27 +51,27 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 8, 2026</p>
+    <p class="updated">Last updated: July 12, 2026</p>
 
     <div class="card">
       <h2>The short version</h2>
       <p class="lede">Pyramids is built to respect your privacy.</p>
       <ul>
-        <li>We do <strong>not</strong> collect, sell, or share your personal data.</li>
-        <li>There are <strong>no</strong> ads, <strong>no</strong> analytics or behavior-tracking SDKs, and <strong>no</strong> user accounts.</li>
-        <li>Your tasks, progress, and settings live <strong>on your device</strong>. A small slice of your game progress can be backed up to <strong>your own iCloud</strong> — it goes to your Apple storage, never to us.</li>
-        <li>Purchases are handled by <strong>Apple</strong> and our purchase provider <strong>RevenueCat</strong> — the only data that ever leaves your device, and only when you choose to buy or restore.</li>
+        <li>We do <strong>not</strong> sell personal data, run ads, or track you across apps or websites.</li>
+        <li>There are <strong>no</strong> ads, <strong>no</strong> analytics or behavior-tracking SDKs, and <strong>no Pyramids user accounts</strong>.</li>
+        <li>Tasks, bricks, and settings are local by default. A limited slice of game progress is backed up to <strong>your private iCloud</strong> when available.</li>
+        <li>Named network flows are Apple/RevenueCat purchase and entitlement handling and, only when you request it, selected task text sent directly to Anthropic for the optional AI helper. Pyramids does not operate an application server for these flows.</li>
       </ul>
 
       <h2>What's stored on your device</h2>
-      <p>The app keeps your tasks, completed-task history ("bricks"), level, coins, streaks, shop items, and settings locally on your device. This data is not transmitted to us. If you delete the app, this data is removed with it.</p>
+      <p>The app keeps your tasks, completed-task history ("bricks"), level, coins, streaks, shop items, and settings locally on your device. This data is not transmitted to us. If you delete the app, this local copy is removed. The limited iCloud economy backup below may remain available for reinstall until you use <strong>Clear App Data</strong> or remove it through your Apple/iCloud controls.</p>
 
       <h2>iCloud backup</h2>
-      <p>So a new phone or a reinstall doesn't wipe out progress you've earned or paid for, the app backs up a small slice of your game state — your coins, owned shop items, streaks, and gem balance — to <strong>your own private iCloud</strong> using Apple's iCloud Key-Value Store.</p>
+      <p>So a new phone or a reinstall doesn't wipe out progress you've earned or paid for, the app automatically backs up a small slice of your game state — progression/economy totals, owned and equipped shop items, consumable counts, and gem balance — to <strong>your own private iCloud</strong> using Apple's iCloud Key-Value Store when it is available.</p>
       <ul>
         <li>This uses the iCloud account already signed in on your device. There is <strong>no separate account</strong>, sign-up, or password.</li>
         <li>The data is stored in <strong>your</strong> Apple iCloud storage, governed by Apple's privacy policy. It <strong>never reaches our servers</strong> — we cannot see it.</li>
-        <li>It is not medical, personal, or contact information — only in-game economy values.</li>
+        <li>It contains in-game progression/economy values and stable game-operation markers, not task titles, task notes, brick titles, contacts, the Anthropic key, or purchase receipts.</li>
         <li>If iCloud is signed out or unavailable, the app works exactly the same using its local copy; the backup is best-effort.</li>
         <li><strong>Clear App Data</strong> in Settings erases this backup along with your local data (your gem balance is deliberately preserved, since gems are purchased value).</li>
       </ul>
@@ -80,9 +80,9 @@
       <p>Pyramids offers optional in-app purchases — the <strong>Pyramids Plus</strong> subscription and <strong>gem</strong> packs. Everything the app did before remains free; purchases only add to it.</p>
       <ul>
         <li>All payments are processed by <strong>Apple</strong> through the App Store. We never see or receive your payment-card details.</li>
-        <li>To unlock what you've bought and keep it working across your devices and reinstalls, the app uses <strong>RevenueCat</strong>, a subscription-management service. When you make or restore a purchase, RevenueCat receives a randomly generated app-user identifier, your App Store purchase receipt, and basic device/app information needed to validate the purchase.</li>
+        <li>To unlock what you've bought and keep it working across your devices and reinstalls, the app uses <strong>RevenueCat</strong>, a subscription-management service. The configured SDK checks entitlement status at launch and during purchase, restore, and subscription management. RevenueCat receives a randomly generated app-user identifier, App Store purchase history/receipt information, and basic app/device information needed for this purpose.</li>
         <li>This identifier is <strong>not</strong> linked to your name, email, or Apple ID, and is used only to manage entitlements — <strong>not</strong> for advertising or cross-app tracking.</li>
-        <li>RevenueCat's handling of this data is governed by <a href="https://www.revenuecat.com/privacy">RevenueCat's own privacy policy</a>; Apple's handling is governed by Apple's privacy policy.</li>
+        <li>RevenueCat's handling of this data is governed by <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>; Apple's handling is governed by <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
         <li>We do not operate our own server in this flow and store none of this data ourselves.</li>
       </ul>
 
@@ -94,7 +94,7 @@
       <ul>
         <li>The text of the task you choose to break down is sent to Anthropic's API to generate suggested steps.</li>
         <li>Your API key is stored securely on your device and is used to call Anthropic directly; usage is billed to your own Anthropic account.</li>
-        <li>We do not operate a server in this flow, do not receive your task text, and do not store it. Anthropic's handling of that request is governed by Anthropic's own privacy policy.</li>
+        <li>We do not operate a server in this flow and do not receive or retain a copy of the request. Anthropic processes the task text and key under <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a> and the terms attached to your Anthropic account.</li>
       </ul>
       <p>You can disable this feature and remove your key at any time in Settings.</p>
 
