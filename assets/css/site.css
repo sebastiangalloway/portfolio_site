@@ -465,11 +465,6 @@ p { text-wrap: pretty; }
   gap: clamp(28px, 5vw, 64px);
   align-items: start;
 }
-@media (max-width: 880px) {
-  .about-grid { grid-template-columns: 1fr; }
-  .about-photo { position: static; max-width: 420px; }
-}
-
 .about-photo {
   margin: 0;
   position: sticky;
@@ -486,6 +481,15 @@ p { text-wrap: pretty; }
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: var(--ink-soft);
+}
+@media (max-width: 880px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo { max-width: 420px; }
+}
+/* The photo only scroll-follows on wide screens with a mouse; on mobile,
+   tablets, or any layout where it sits above the text it stays put. */
+@media (max-width: 880px), (pointer: coarse) {
+  .about-photo { position: static; }
 }
 
 .about-copy p { margin: 0 0 1.2em; color: var(--ink-soft); }
