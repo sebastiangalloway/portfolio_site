@@ -3,10 +3,16 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Sebastian Galloway</title>
-  <meta content="Sebastian's Portfolio Website" name="description" />
-  <meta content="" name="keywords" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebastian Galloway — Software Engineer</title>
+  <meta name="description"
+    content="Sebastian Galloway — software engineer at Progressive Insurance, iOS app developer, and robotics coach based in Miami, FL." />
+  <meta name="theme-color" content="#07070f" />
+  <meta property="og:title" content="Sebastian Galloway — Software Engineer" />
+  <meta property="og:description"
+    content="Software engineer at Progressive Insurance, iOS app developer, and robotics coach based in Miami, FL." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sgalloway.net" />
 
   <!-- Favicons -->
   <link href="assets/img/websitelogo.webp" rel="icon" />
@@ -16,697 +22,424 @@
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet" />
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/css/site.css" rel="stylesheet" />
 </head>
 
-<body class="index-page">
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+<body>
+  <!-- Scroll progress (pure CSS scroll-driven animation) -->
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-    <div class="profile-img">
-      <img src="assets/img/newprofileimage.jpg" alt="" class="img-fluid rounded-circle" />
-    </div>
+  <!-- WebGL shader backdrop for hero -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="hero-fallback" aria-hidden="true"></div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Sebastian Galloway</h1>
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#top">
+      <span class="brand-mark">SG</span>
+      <span class="brand-name">Sebastian&nbsp;Galloway</span>
     </a>
-
-    <div class="social-links text-center">
-      <a href="https://github.com/sebastiangalloway/" class="github">
-        <i class="bi bi-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sebastiangalloway/" class="linkedin">
-        <i class="bi bi-linkedin"></i>
-      </a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li>
-          <a href="#hero" class="active">
-            <i class="bi bi-house navicon"></i>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#about">
-            <i class="bi bi-person navicon"></i>
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#resume">
-            <i class="bi bi-file-earmark-text navicon"></i>
-            Resume
-          </a>
-        </li>
-        <li>
-          <a href="#portfolio">
-            <i class="bi bi-images navicon"></i>
-            Portfolio
-          </a>
-        </li>
-      </ul>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
     </nav>
+    <div class="nav-actions">
+      <a class="icon-btn" href="https://github.com/sebastiangalloway/" target="_blank" rel="noopener"
+        aria-label="GitHub">
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+        </svg>
+      </a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/sebastiangalloway/" target="_blank" rel="noopener"
+        aria-label="LinkedIn">
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <path
+            d="M0 1.15C0 .52.53 0 1.18 0h13.64C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.18 1.15H1.18A1.17 1.17 0 0 1 0 14.85V1.15Zm4.94 12.24V6.17H2.54v7.22h2.4ZM3.74 5.18c.84 0 1.36-.55 1.36-1.24-.02-.71-.52-1.25-1.34-1.25S2.4 3.23 2.4 3.94c0 .69.52 1.24 1.32 1.24h.02Zm3.35 8.21h2.4V9.36c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.22.66 1.22 1.63v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19h.02V6.17h-2.4c.03.68 0 7.22 0 7.22Z" />
+        </svg>
+      </a>
+      <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+        <svg class="sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41" />
+        </svg>
+        <svg class="moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+        </svg>
+      </button>
+    </div>
   </header>
 
-  <main class="main">
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-background.jpeg" alt="" data-aos="fade-in" class="" />
+  <main id="top">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Sebastian Galloway</h2>
-        <p>
-          I am a
-          <span class="typed" data-typed-items="Student, Teacher, Developer, Software Engineer">
-          </span>
-          <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow reveal"><span class="pulse-dot"></span>Miami, FL · Software Developer @ Progressive</p>
+        <h1 class="hero-title">
+          <span class="reveal" style="--i:0">Sebastian</span>
+          <span class="reveal shimmer" style="--i:1">Galloway</span>
+        </h1>
+        <p class="hero-sub reveal" style="--i:2">
+          I am a <span class="typed" id="typed" data-items='["Software Engineer","App Developer","Teacher","Student"]'></span><span class="caret" aria-hidden="true"></span>
         </p>
+        <p class="hero-blurb reveal" style="--i:3">
+          Software developer at Progressive Insurance and M.S. Computer Science student specializing in
+          Human-Computer Interaction. I am working toward a career of designing human centered solutions that
+          enable people to live more fulfilling lives.
+        </p>
+        <div class="hero-cta reveal" style="--i:4">
+          <a class="btn btn-primary magnetic" href="#projects">View my work</a>
+          <a class="btn btn-ghost magnetic" href="#about">About me</a>
+        </div>
+        <div class="hero-now reveal" style="--i:5">
+          <div class="now-item">
+            <span class="now-label">Now</span>
+            <span class="now-value">IT Software Developer @ Progressive</span>
+          </div>
+          <div class="now-item">
+            <span class="now-label">Building</span>
+            <span class="now-value">Pyramids — a gamified focus app for iOS</span>
+          </div>
+          <div class="now-item">
+            <span class="now-label">Studying</span>
+            <span class="now-value">M.S. CS, Human-Computer Interaction @ WGU</span>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to About">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">01 — About</p>
+          <h2 class="section-title">Human-centered engineer,<br />hands-on builder.</h2>
+        </header>
+
+        <div class="about-grid">
+          <figure class="about-photo card-3d">
+            <img src="assets/img/gradphoto - 1.png" alt="Sebastian Galloway at his FIU graduation" loading="lazy" />
+            <figcaption>B.S. Computer Science — FIU, Dec 2024</figcaption>
+          </figure>
+
+          <div class="about-copy">
+            <p>
+              I'm Sebastian Galloway, a Computer Science graduate from
+              <a href="https://fiu.edu" target="_blank" rel="noopener">Florida International University</a> and an IT
+              Software Developer Associate at
+              <a href="https://www.progressive.com/" target="_blank" rel="noopener">Progressive Insurance</a>, where I
+              build and support large-scale enterprise software systems that impact thousands of users. Since June
+              2025, I've contributed to SQL data pipeline development and a major migration from legacy claims systems
+              to a modern policy administration platform. Alongside my full-time work, I'm pursuing a Master of Science
+              in Computer Science with a specialization in Human-Computer Interaction at
+              <a href="https://www.wgu.edu/" target="_blank" rel="noopener">Western Governors University</a>, which I
+              began in July 2026.
+            </p>
+            <p>
+              Outside of work and school, I'm developing
+              <a href="https://apps.apple.com/app/pyramids-focus-build/id6782373867" target="_blank"
+                rel="noopener">Pyramids</a>, a gamified productivity iOS app built in Flutter and Dart that turns tasks
+              into a roguelike dungeon. I also co-coached three VEX robotics teams at Sagemont Preparatory Lower School
+              from November 2025 to March 2026, helping advance all three teams to the Florida State Championship
+              Tournament and earning Mentor of the Year.
+            </p>
+            <p>
+              Above all, I'm passionate about building meaningful, human-centered technology that improves lives,
+              working in diverse teams, mentoring others, and making a positive, lasting contribution to the tech
+              industry and communities around me.
+            </p>
+
+            <dl class="fact-grid">
+              <div class="fact"><dt>Location</dt><dd>Miami, FL</dd></div>
+              <div class="fact"><dt>Role</dt><dd>IT Software Developer Associate</dd></div>
+              <div class="fact"><dt>Degrees</dt><dd>B.S. CS (FIU ’24) · M.S. CS in progress (WGU ’27)</dd></div>
+              <div class="fact"><dt>Interests</dt><dd>Cognitive Science, Mental Health, Psychology, AI/ML, Finance, Robotics</dd></div>
+            </dl>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
-          &emsp;&emsp; I am Sebastian Galloway, a Computer Science graduate from 
-           <a href="https://fiu.edu">Florida International University</a> and an IT Software Developer Associate at
-          <a href="https://www.progressive.com/">Progressive Insurance</a>, where I build and support large-scale
-          enterprise software systems that impact thousands of users. Since June 2025, I have contributed to SQL data
-          pipeline development and a major migration from legacy claims systems to a modern policy administration
-          platform. Alongside my full-time work, I am pursuing a Master of Science in Computer Science with a
-          specialization in Human-Computer Interaction at
-          <a href="https://www.wgu.edu/">Western Governors University</a>, which I began in July 2026.
-        </p>
-        <p>
-          &emsp;&emsp; Outside of work, I am developing
-          <a href="https://apps.apple.com/app/pyramids-focus-build/id6782373867">Pyramids</a>, a gamified productivity iOS app built in
-          Flutter and Dart that turns tasks into a roguelike dungeon. I also co-coached three VEX robotics teams at
-          Sagemont Preparatory Lower School from November 2025 to March 2026, helping advance all three teams to the Florida
-          State Championship Tournamentand earning Mentor of the Year. These experiences reflect my passion for mentorship and for
-          building creative, hands-on technology.
-        </p>
-        <p>
-          &emsp;&emsp; Above all, I am passionate about building meaningful, human-centered technology that improves lives. Whether
-          working
-          in diverse teams, mentoring others, or pushing myself to grow, I am committed to making a positive, lasting
-          contribution in the tech industry and beyond.
-        </p>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">02 — Experience</p>
+          <h2 class="section-title">Where I've worked.</h2>
+        </header>
 
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-when">Jun 2025 — Present</span><span class="tag tag-live">Current</span></div>
+            <div class="tl-card">
+              <h3>IT Software Developer Associate</h3>
+              <p class="tl-org">Progressive Insurance · Remote</p>
+              <ul>
+                <li>Contributed to SQL data pipeline development and remapping as part of a large-scale enterprise migration from legacy claims systems to a modern policy administration platform.</li>
+                <li>Supported implementation of reinsurance extraction and financial aggregation logic across multiple workstreams, including subrogation loss recovery and deductible billing consolidation.</li>
+                <li>Assisted in end-to-end validation and reconciliation testing between legacy and modern systems to ensure financial reporting accuracy.</li>
+                <li>Performed impact analysis and remediation of enterprise BI reports, resolving SQL logic discrepancies across environments.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-when">Nov 2025 — Mar 2026</span></div>
+            <div class="tl-card">
+              <h3>Part-Time Robotics Coach</h3>
+              <p class="tl-org">Sagemont Preparatory Lower School</p>
+              <ul>
+                <li>Coached 3 elementary VEX robotics teams independently contracted by the school, teaching coding fundamentals and competition strategy that advanced all 3 teams to the Florida State Championship.</li>
+                <li>Awarded Mentor of the Year at the final regional competition, recognized for student development and high-level competitive coaching.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-when">Aug 2023 — Dec 2024</span></div>
+            <div class="tl-card">
+              <h3>Assistant Director &amp; Lead Robotics/Coding Instructor</h3>
+              <p class="tl-org">Code Ninjas · Sagemont Elementary · NSU University School — Weston, FL</p>
+              <ul>
+                <li>Co-coached Sagemont Elementary's robotics team, the Lion Innovators — qualified for the elementary World Open and South-Florida State Championship in the 2024–25 season.</li>
+                <li>Managed daily operations and program logistics as Assistant Director, supporting instructors, addressing parent inquiries, and implementing strategic initiatives.</li>
+                <li>Led an 8-week summer enrichment program on robotics, scripting, and programming fundamentals using Roblox Studio Lua, Microsoft MakeCode, Lego Spike, and Minecraft modding.</li>
+                <li>Taught 15 classes of students (pre-K to 5th grade) coding, engineering, and software development with VEX robotics kits, Sphero, VEXcode VR, and TinkerCAD.</li>
+                <li>Guided students aged 5–18 in game development and programming using C#, JavaScript, Unity, Python, Roblox Studio, Scratch Jr, and MakeCode.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-when">Sep 2022 — Aug 2023</span></div>
+            <div class="tl-card">
+              <h3>Freelance Web Developer</h3>
+              <p class="tl-org">Miami, FL</p>
+              <ul>
+                <li>Assisted in building Party on a Budget, a digital marketplace for party supplies and services, using HTML, CSS, and JavaScript.</li>
+                <li>Created a Wix website for Zoe Vision, a Haitian non-profit foundation helping students access higher education.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-when">Sep 2022 — Aug 2023</span></div>
+            <div class="tl-card">
+              <h3>STEM Youth Instructor</h3>
+              <p class="tl-org">GEN2050 · Miami, FL</p>
+              <ul>
+                <li>Delivered science, technology, engineering, arts, and math curriculum to middle- and high-school students.</li>
+                <li>Taught fundamental programming concepts with MIT Scratch and Arduino hardware, producing interactive quizzes, puzzles, and games.</li>
+                <li>Co-conducted weekly field trips inspiring 25–45 students' interest in STEM through hands-on experiments.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
       </div>
-      <!-- End Section Title -->
+    </section>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/gradphoto - 1.png" class="img-fluid" alt="" />
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">03 — Skills</p>
+          <h2 class="section-title">Tools of the trade.</h2>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-meter" style="--val:90"><div class="ring"><span>90<i>%</i></span></div><h4>HTML / CSS</h4></div>
+          <div class="skill-meter" style="--val:90"><div class="ring"><span>90<i>%</i></span></div><h4>SQL</h4></div>
+          <div class="skill-meter" style="--val:85"><div class="ring"><span>85<i>%</i></span></div><h4>Python</h4></div>
+          <div class="skill-meter" style="--val:80"><div class="ring"><span>80<i>%</i></span></div><h4>JavaScript / TypeScript</h4></div>
+          <div class="skill-meter" style="--val:80"><div class="ring"><span>80<i>%</i></span></div><h4>Dart</h4></div>
+          <div class="skill-meter" style="--val:75"><div class="ring"><span>75<i>%</i></span></div><h4>Java</h4></div>
+          <div class="skill-meter" style="--val:75"><div class="ring"><span>75<i>%</i></span></div><h4>C#</h4></div>
+          <div class="skill-meter" style="--val:65"><div class="ring"><span>65<i>%</i></span></div><h4>C</h4></div>
+        </div>
+
+        <div class="chip-rows">
+          <div class="chip-row">
+            <h5>Technical</h5>
+            <ul class="chips">
+              <li>Web Development</li><li>Front-End</li><li>Back-End</li><li>REST APIs</li>
+              <li>Claude API / LLM Integration</li><li>Data Analysis &amp; Management</li>
+              <li>Data Structures</li><li>Algorithms</li>
+            </ul>
           </div>
-          <div class="col-lg-8 content">
-            <h2>Software Developer & App Programmer</h2>
-            <ul>
-              <table class="about-table">
-                <tr>
-                  <td><i class="bi bi-chevron-right"></i><strong>Location:</strong></td>
-                  <td><span>Miami, FL</span></td>
-                </tr>
-                <tr>
-                  <td><i class="bi bi-chevron-right"></i><strong>Graduation:</strong></td>
-                  <td><span>December 2024</span></td>
-                </tr>
-                <tr>
-                  <td><i class="bi bi-chevron-right"></i><strong>Degree:</strong></td>
-                  <td><span>B.S. Computer Science (FIU, Dec 2024) &middot; M.S. Computer Science in progress (WGU,
-                      Expected 2027)</span></td>
-                </tr>
-                <tr>
-                  <td><i class="bi bi-chevron-right"></i><strong>Interests:</strong></td>
-                  <td><span>Cognitive Science, Mental Health, Psychology, Artificial Intelligence, Machine Learning,
-                      Finance, and Robotics</span></td>
-                </tr>
-              </table>
-
+          <div class="chip-row">
+            <h5>Tools</h5>
+            <ul class="chips">
+              <li>Git / GitHub</li><li>Streamlit</li><li>Unity</li><li>Flutter</li><li>VS Code</li>
+              <li>Xcode / iOS Simulator</li><li>Arduino</li><li>Linux / Unix</li><li>Excel</li>
+              <li>PostgreSQL</li><li>Isar (embedded DB)</li><li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="chip-row">
+            <h5>Soft skills</h5>
+            <ul class="chips">
+              <li>Communication</li><li>Coachability</li><li>Collaboration</li><li>Adaptability</li><li>Leadership</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    <!-- /About Section -->
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row skills-content skills-animation">
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill">
-                <span>Python</span>
-                <i class="val">85%</i>
-              </span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill">
-                <span>Java</span>
-                <i class="val">75%</i>
-              </span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill">
-                <span>JavaScript/TypeScript</span>
-                <i class="val">80%</i>
-              </span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill">
-                <span>C</span>
-                <i class="val">65%</i>
-              </span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <!-- End Skills Item -->
-          </div>
-
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill">
-                <span>C#</span>
-                <i class="val">75%</i>
-              </span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill">
-                <span>HTML/CSS</span>
-                <i class="val">90%</i>
-              </span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill">
-                <span>SQL</span>
-                <i class="val">90%</i>
-              </span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill">
-                <span>Dart</span>
-                <i class="val">80%</i>
-              </span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <!-- End Skills Item -->
-
-
-          </div>
-        </div>
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <h5>Additional Skills:</h5>
-        <p>
-          <strong>Additional Technical Skills:</strong>
-          Web Development, Front-End Development, Back-End Development, REST API's, Claude API / LLM Integration, Data
-          Analysis and Management, Data Structures, and Algorithms
-        </p>
-        <p>
-          <strong>Tools:</strong>
-          Git/GitHub, Streamlit, Unity, Flutter, VScode, Xcode / iOS Simulator, Arduino, Linux/Unix, Excel, PostgreSQL,
-          Isar (embedded DB), and MongoDB
-        </p>
-        <p>
-          <strong>Soft Skills:</strong>
-          Communication, Coachability, Collaboration, Adaptability, and
-          Leadership
-        </p>
-      </div>
-      <!-- End Addiional Skills -->
-    </section>
-    <!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-      </div>
-      <!-- End Section Title -->
-
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section-alt" id="projects">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
+        <header class="section-head">
+          <p class="section-kicker">04 — Projects</p>
+          <h2 class="section-title">Things I've built.</h2>
+        </header>
 
-            <div class="resume-item pb-0">
-              <h4>Sebastian Galloway</h4>
-              <p>
-                <em>
-                  Software developer at Progressive Insurance with hands-on experience building SQL data pipelines,
-                  supporting enterprise system migrations, developing mobile applications, and coaching competitive
-                  robotics. Computer Science graduate and current M.S. student passionate about leveraging my technical
-                  skills and communication to build impactful, human-centered software.
-                </em>
-              </p>
-              <ul>
-                <li>Miami, FL</li>
-              </ul>
+        <div class="project-grid">
+          <article class="project-card card-3d featured">
+            <div class="project-media">
+              <img src="assets/img/portfolio/newpyramidsicon.png" alt="Pyramids app icon" loading="lazy" />
             </div>
-            <!-- Edn Resume Item -->
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>M.S. Computer Science, Human-Computer Interaction</h4>
-              <p><em>Western Governors University</em></p>
-              <h5>Expected 2027</h5>
+            <div class="project-body">
+              <div class="project-tags"><span>Flutter</span><span>Dart</span><span>Claude API</span><span>iOS</span></div>
+              <h3>Pyramids — Focus &amp; Build 🏗️</h3>
+              <p>A gamified productivity iOS app that turns tasks into a roguelike dungeon — defeat enemies through
+                timed focus sessions and build your pyramid one brick at a time. Built solo with Claude API
+                integration, an XP/streak economy, and a custom pixel-art design system.</p>
+              <div class="project-links">
+                <a href="https://apps.apple.com/app/pyramids-focus-build/id6782373867" target="_blank" rel="noopener">App Store ↗</a>
+              </div>
             </div>
-            <!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>Bachelor's of Computer Science</h4>
-              <p><em>Florida International University</em></p>
-              <p><em>Miami Florida</em></p>
-              <h5>2019 - 2024</h5>
-              <p>Notable Courses:</p>
-              <ul>
-                <li>Human Computer Interactions</li>
-                <li>Quantum Computing</li>
-                <li>Artificial Intelligence</li>
-                <li>Software Engineering 1 & 2</li>
-                <li>Data Structures</li>
-                <li>Statistics for CS</li>
-                <li>Database Management</li>
-                <li>Software Testing</li>
-                <li>Net Centric Computing</li>
-                <li>Operating Systems Principles</li>
-                <li>Discrete Structures</li>
-                <li>Programming 1 & 2</li>
-                <li>Computer Architecture</li>
-                <li>Principles of Programming Languages</li>
-                <li>Logic for Computer Science</li>
-              </ul>
-            </div>
-            <!-- Edn Resume Item -->
-            <h3 class="resume-title">Organizations</h3>
+          </article>
 
-            <div class="resume-item">
-              <h4>CodePath Member</h4>
-              <p><em>- Technical Interview Prep Program 101</em></p>
-              <h4>HeadStarter AI Member</h4>
-              <p><em>- Summer 2024 Fellowship</em></p>
-              <h4>ColorStack Member</h4>
-              <p></p>
-              <h4>FIU INIT Member</h4>
+          <article class="project-card card-3d">
+            <div class="project-media">
+              <img src="assets/img/portfolio/stockdashboardss.png" alt="Stock Dashboard screenshot" loading="lazy" />
             </div>
-            <!-- Edn Resume Item -->
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-
-            <div class="resume-item">
-              <h4>IT Software Developer Associate</h4>
-              <p><em>Progressive Insurance</em></p>
-              <p><em>Remote</em></p>
-              <h5>June 2025 - Present</h5>
-              <ul>
-                <li>
-                  Contributed to SQL data pipeline development and remapping as part of a large-scale enterprise
-                  migration from legacy claims systems to a modern policy administration platform.
-                </li>
-                <li>
-                  Supported implementation of reinsurance extraction and financial aggregation logic across multiple
-                  workstreams, including subrogation loss recovery and deductible billing consolidation.
-                </li>
-                <li>
-                  Assisted in end-to-end validation and reconciliation testing between legacy and modern systems to
-                  ensure financial reporting accuracy.
-                </li>
-                <li>
-                  Performed impact analysis and remediation of enterprise BI reports, resolving SQL logic discrepancies
-                  and ensuring alignment with updated data models across environments.
-                </li>
-              </ul>
+            <div class="project-body">
+              <div class="project-tags"><span>Python</span><span>Streamlit</span></div>
+              <h3>Stock Dashboard</h3>
+              <p>A tool for quick and easy stock analysis.</p>
+              <div class="project-links">
+                <a href="https://github.com/sebastiangalloway/streamlit_stock_app" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
             </div>
-            <!-- Edn Resume Item -->
+          </article>
 
-            <div class="resume-item">
-              <h4>Assistant Director & Lead Robotics/Coding Instructor</h4>
-              <p>
-                <em>
-                  Code Ninjas, Sagemont Elementary, & NSU University School
-                </em>
-              </p>
-              <p><em>Weston, FL</em></p>
-              <h5>August 2023 - December 2024</h5>
-              <ul>
-                <li>
-                  Co-Coached Sagemont Elementary school's robotics team, the Lion
-                  Innovators, where we participated in monthly robotics
-                  competitions. During the 2024-25 Season our team qualified for the elementary World Open and
-                  South-Florida State Championship Tournaments.
-                </li>
-                <li>
-                  Managed daily operations and program logistics as an Assistant Director,
-                  ensuring smooth delivery of curriculum and maintaining a high standard
-                  of student engagement and satisfaction. Worked with owner to support
-                  instructors, address parent inquiries, and implement strategic
-                  initiatives to enhance the learning environment.
-                </li>
-                <li>
-                  Led 8-week summer enrichment program on robotics, scripting,
-                  algorithms, and programming fundamentals through the use of
-                  Roblox Studio Lua scripting, Microsoft MakeCode, Lego Spike
-                  robotics, and Minecraft Modding.
-                </li>
-                <li>
-                  Educated 15 classes of students (pre-K to 5th grade) on
-                  coding, engineering, and software development at Sagemont
-                  Preparatory School, utilizing Vex robotics kits (Vex 123,
-                  Vex Go, Vex IQ), Sphero, VexCode VR, and TinkerCAD.
-                </li>
-                <li>
-                  Developed and delivered engaging curricula on Spheros,
-                  information technology, and coding fundamentals for an
-                  elementary group at NSU University School's afterschool
-                  program, boosting student interest and proficiency in coding
-                  principles.
-                </li>
-                <li>
-                  Guided students aged 5-18 at Code Ninjas Weston in game
-                  development and programming, fostering creativity and
-                  problem-solving using C#, JavaScript, Unity, Python, Roblox
-                  Studio, Scratch Jr, Microsoft MakeCode, and Sphero.
-                </li>
-              </ul>
+          <article class="project-card card-3d">
+            <div class="project-media">
+              <img src="assets/img/portfolio/mlstockpredictorss.png" alt="ML Stock Predictor screenshot" loading="lazy" />
             </div>
-            <!-- Edn Resume Item -->
+            <div class="project-body">
+              <div class="project-tags"><span>Python</span><span>Machine Learning</span></div>
+              <h3>ML Stock Predictor</h3>
+              <p>A tool for predicting future performance of stocks.</p>
+              <div class="project-links">
+                <a href="https://github.com/sebastiangalloway/MLstockpredictor" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
 
-            <div class="resume-item">
-              <h4>Part-Time Robotics Coach</h4>
-              <p><em>Sagemont Preparatory Lower School</em></p>
-              <h5>November 2025 - March 2026</h5>
-              <ul>
-                <li>
-                  Coached 3 elementary VEX robotics teams independently contracted by the school, teaching coding
-                  fundamentals and competition strategy that advanced all 3 teams to the Florida State Championship.
-                </li>
-                <li>
-                  Awarded Mentor of the Year at the final regional competition, recognized for student development and
-                  high-level competitive coaching.
-                </li>
-              </ul>
+          <article class="project-card card-3d">
+            <div class="project-media">
+              <img src="assets/img/portfolio/weatherappss.png" alt="Weather App screenshot" loading="lazy" />
             </div>
-            <!-- Edn Resume Item -->
+            <div class="project-body">
+              <div class="project-tags"><span>JavaScript</span><span>REST API</span></div>
+              <h3>Weather App</h3>
+              <p>A tool for easy access to weather information.</p>
+              <div class="project-links">
+                <a href="https://github.com/sebastiangalloway/weatherAppApi" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
 
-            <div class="resume-item">
-              <h4>Freelance Web Developer</h4>
-              <p><em>Miami, FL</em></p>
-              <h5>September 2022 - August 2023</h5>
-              <ul>
-                <li>
-                  Assisted in building Party on a Budget, a digital marketplace for party
-                  supplies and services using HTML, CSS, JavaScript.
-                </li>
-                <li>
-                  Created Wix website for Haitian Non-Profit foundation Zoe
-                  Vision to help provide students with opportunity to higher
-                  education.
-                </li>
-              </ul>
+          <article class="project-card card-3d">
+            <div class="project-media">
+              <img src="assets/img/portfolio/codepathtip101cert.png" alt="CodePath TIP 101 certificate" loading="lazy" />
             </div>
-            <!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>STEM Youth Instructor</h4>
-              <p><em>GEN2050</em></p>
-              <p><em>Miami, FL</em></p>
-              <h5>September 2022 - August 2023</h5>
-              <ul>
-                <li>
-                  Successfully delivered science, technology, engineering,
-                  arts, and math curriculum to middle-school and high-school
-                  students.
-                </li>
-                <li>
-                  Taught students about fundamental programming concepts using
-                  the MIT Scratch coding language and Arduino microcontroller
-                  hardware resulting in interactive projects including
-                  quizzes, puzzles, and games.
-                </li>
-                <li>
-                  Co-conducted weekly field trips geared towards inspiring 25-45
-                  students' interest in STEM topics through hands-on
-                  experiments.
-                </li>
-              </ul>
+            <div class="project-body">
+              <div class="project-tags"><span>Certificate</span></div>
+              <h3>CodePath TIP 101</h3>
+              <p>Technical interview prep — data structures, algorithms, and a preview of real-world industry challenges.</p>
+              <div class="project-links">
+                <a href="https://www.codepath.org/courses/tech-interview-prep" target="_blank" rel="noopener">CodePath ↗</a>
+              </div>
             </div>
-            <!-- Edn Resume Item -->
-          </div>
+          </article>
         </div>
       </div>
     </section>
-    <!-- /Resume Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Below are some projects that I am proud of.</p>
-      </div>
-      <!-- End Section Title -->
-
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
       <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">
-              All
-            </li>
-            <li data-filter=".filter-apps">Apps</li>
-            <li data-filter=".filter-certificates">Certificates</li>
-            <li data-filter=".filter-events">Events</li>
-            <li data-filter=".filter-awards">Awards</li>
-          </ul>
-          <!-- End Portfolio Filters -->
+        <header class="section-head">
+          <p class="section-kicker">05 — Education &amp; Community</p>
+          <h2 class="section-title">Always learning.</h2>
+        </header>
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/newpyramidsicon.png" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Pyramids App 🏗️</h4>
-                  <p>Pyramids is a gamified productivity iOS app that turns tasks into a roguelike dungeon — defeat
-                    enemies through timed focus sessions and build your pyramid one brick at a time. Built solo in
-                    Flutter/Dart with Claude API integration, an XP/streak economy, and a custom pixel-art design
-                    system.</p>
-                  <a href="assets/img/portfolio/newpyramidsicon.png" title="Pyramids App"
-                    data-gallery="portfolio-gallery-app" class="glightbox preview-link">
-                    <i class="bi bi-zoom-in"></i>
-                  </a>
-                  <a href="https://apps.apple.com/app/pyramids-focus-build/id6782373867" title="More Details" class="details-link">
-                    <i class="bi bi-link-45deg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/stockdashboardss.png" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Stock Dashboard</h4>
-                  <p>A tool for quick and easy stock analysis.</p>
-                  <a href="assets/img/portfolio/stockdashboardss.png" title="Stock App"
-                    data-gallery="portfolio-gallery-app" class="glightbox preview-link">
-                    <i class="bi bi-zoom-in"></i>
-                  </a>
-                  <a href="https://github.com/sebastiangalloway/streamlit_stock_app" title="More Details"
-                    class="details-link">
-                    <i class="bi bi-link-45deg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/weatherappss.png" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Weather App</h4>
-                  <p>A tool for easy access to weather information.</p>
-                  <a href="assets/img/portfolio/weatherappss.png" title="Weather App"
-                    data-gallery="portfolio-gallery-app" class="glightbox preview-link">
-                    <i class="bi bi-zoom-in"></i>
-                  </a>
-                  <a href="https://github.com/sebastiangalloway/weatherAppApi" title="More Details"
-                    class="details-link">
-                    <i class="bi bi-link-45deg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-apps">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/mlstockpredictorss.png" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>ML Stock Predictor</h4>
-                  <p>A tool for predicting future performance of stocks.</p>
-                  <a href="assets/img/portfolio/mlstockpredictorss.png" title="Stock ML APP"
-                    data-gallery="portfolio-gallery-app" class="glightbox preview-link">
-                    <i class="bi bi-zoom-in"></i>
-                  </a>
-                  <a href="https://github.com/sebastiangalloway/MLstockpredictor" title="More Details"
-                    class="details-link">
-                    <i class="bi bi-link-45deg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certificates">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/codepathtip101cert.png" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>CodePath TIP 101</h4>
-                  <p>Introductory course focused on empowering students to ace technical interviewing and give them a
-                    preview of real-world
-                    challenges in the industry.</p>
-                  <a href="assets/img/portfolio/codepathtip101cert.png" title="CodePath TIP 101"
-                    data-gallery="portfolio-gallery-certificates" class="glightbox preview-link">
-                    <i class="bi bi-zoom-in"></i>
-                  </a>
-                  <a href="https://www.codepath.org/courses/tech-interview-prep" title="More Details"
-                    class="details-link">
-                    <i class="bi bi-link-45deg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
+        <div class="edu-grid">
+          <div class="edu-card">
+            <p class="edu-when">Expected 2027</p>
+            <h3>M.S. Computer Science — Human-Computer Interaction</h3>
+            <p class="edu-org">Western Governors University</p>
           </div>
-          <!-- End Portfolio Container -->
+          <div class="edu-card">
+            <p class="edu-when">2019 — 2024</p>
+            <h3>B.S. Computer Science</h3>
+            <p class="edu-org">Florida International University · Miami, FL</p>
+            <details class="courses">
+              <summary>Notable courses</summary>
+              <div class="courses-body">
+                <ul class="chips">
+                  <li>Human-Computer Interaction</li><li>Quantum Computing</li><li>Artificial Intelligence</li>
+                  <li>Software Engineering 1 &amp; 2</li><li>Data Structures</li><li>Statistics for CS</li>
+                  <li>Database Management</li><li>Software Testing</li><li>Net-Centric Computing</li>
+                  <li>Operating Systems Principles</li><li>Discrete Structures</li><li>Programming 1 &amp; 2</li>
+                  <li>Computer Architecture</li><li>Principles of Programming Languages</li><li>Logic for CS</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+          <div class="edu-card">
+            <p class="edu-when">Organizations</p>
+            <h3>Community</h3>
+            <ul class="org-list">
+              <li><strong>CodePath</strong> — Technical Interview Prep 101</li>
+              <li><strong>HeadStarter AI</strong> — Summer 2024 Fellowship</li>
+              <li><strong>ColorStack</strong> — Member</li>
+              <li><strong>FIU INIT</strong> — Member</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    <!-- /Portfolio Section -->
+
+    <!-- ============ CONTACT / FOOTER ============ -->
+    <footer class="footer" id="contact">
+      <div class="container footer-inner">
+        <h2 class="footer-title shimmer">Let's Connect!</h2>
+        <p class="footer-sub">You can find me on GitHub and LinkedIn. I'm always happy to talk software, robotics, or AI.</p>
+        <div class="footer-links">
+          <a class="btn btn-primary magnetic" href="https://www.linkedin.com/in/sebastiangalloway/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost magnetic" href="https://github.com/sebastiangalloway/" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost magnetic" href="https://apps.apple.com/app/pyramids-focus-build/id6782373867" target="_blank" rel="noopener">Pyramids on the App Store</a>
+        </div>
+        <p class="footer-fine">© <span id="year">2026</span> Sebastian Galloway </p>
+      </div>
+    </footer>
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <div class="copyright text-center">
-        <p>
-          ©
-          <span>Copyright</span>
-          <strong class="px-1 sitename">Sebastian Galloway</strong>
-          <span>All Rights Reserved</span>
-        </p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Powered by
-        <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site.js" defer></script>
 </body>
 
 </html>
