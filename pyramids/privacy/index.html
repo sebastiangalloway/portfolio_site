@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap"
     rel="stylesheet" />
 
   <style>
@@ -51,22 +51,32 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 12, 2026</p>
+    <p class="updated">Last updated: July 23, 2026</p>
 
     <div class="card">
+      <p class="lede">Pyramids ("the app", "we") is built to respect your privacy. This policy explains what the app does and does not do with your information.</p>
+
       <h2>The short version</h2>
-      <p class="lede">Pyramids is built to respect your privacy.</p>
       <ul>
         <li>We do <strong>not</strong> sell personal data, run ads, or track you across apps or websites.</li>
-        <li>There are <strong>no</strong> ads, <strong>no</strong> analytics or behavior-tracking SDKs, and <strong>no Pyramids user accounts</strong>.</li>
-        <li>Tasks, bricks, and settings are local by default. A limited slice of game progress is backed up to <strong>your private iCloud</strong> when available.</li>
-        <li>Named network flows are Apple/RevenueCat purchase and entitlement handling and, only when you request it, selected task text sent directly to Anthropic for the optional AI helper. Pyramids does not operate an application server for these flows.</li>
+        <li>We have <strong>no</strong> ads, <strong>no</strong> analytics or behavior-tracking SDKs, and <strong>no Pyramids user accounts</strong>.</li>
+        <li>Tasks and bricks are local by default. Pyramids Plus includes optional <strong>Pyramid Sync</strong>, which can store reviewed task and pyramid data in your private iCloud after you enable it. A separate limited slice of game progress backs up automatically.</li>
+        <li>Named network flows are Apple/RevenueCat purchase and entitlement handling and, only when you explicitly request it, selected task text sent directly to Anthropic for the optional AI helper. Optional Pyramid Sync uses Apple CloudKit. Pyramids does not operate an application server for these flows.</li>
       </ul>
 
       <h2>What's stored on your device</h2>
-      <p>The app keeps your tasks, completed-task history ("bricks"), level, coins, streaks, shop items, and settings locally on your device. This data is not transmitted to us. If you delete the app, this local copy is removed. The limited iCloud economy backup below may remain available for reinstall until you use <strong>Clear App Data</strong> or remove it through your Apple/iCloud controls.</p>
+      <p>The app keeps your tasks, completed-task history ("bricks"), level, coins, streaks, shop items, and settings locally on your device (using on-device storage). Pyramids does not operate a server that receives this data. Tasks and bricks leave the device only through an explicit Task Backup export/share or when you enable optional Pyramid Sync as described below. If you delete the app, the local copy is removed. iCloud copies may remain until you use the matching in-app deletion control or Apple/iCloud controls.</p>
 
-      <h2>iCloud backup</h2>
+      <h2>Local task backup and sharing</h2>
+      <p>Settings includes an optional Task Backup tool. When you explicitly use it, Pyramids creates a readable JSON file containing your tasks and related local task data, such as schedules, notes, links, projects/tags, completion history, and pyramid stones.</p>
+      <ul>
+        <li>You choose the save location through Apple's Files interface or choose a destination through the iOS share sheet. Pyramids has no backup server and receives no copy.</li>
+        <li>The file excludes your Anthropic API key, settings, coins, purchased gems, Pyramids Plus/entitlement status, purchase receipts, notification delivery ids, and internal operation logs.</li>
+        <li>Previewing an import does not change app data. You must explicitly choose Merge or Replace before the validated file is applied.</li>
+        <li>Because the JSON contains readable task text, store or share it only with a location or person you trust.</li>
+      </ul>
+
+      <h2>Automatic iCloud economy backup</h2>
       <p>So a new phone or a reinstall doesn't wipe out progress you've earned or paid for, the app automatically backs up a small slice of your game state — progression/economy totals, owned and equipped shop items, consumable counts, and gem balance — to <strong>your own private iCloud</strong> using Apple's iCloud Key-Value Store when it is available.</p>
       <ul>
         <li>This uses the iCloud account already signed in on your device. There is <strong>no separate account</strong>, sign-up, or password.</li>
@@ -74,6 +84,16 @@
         <li>It contains in-game progression/economy values and stable game-operation markers, not task titles, task notes, brick titles, contacts, the Anthropic key, or purchase receipts.</li>
         <li>If iCloud is signed out or unavailable, the app works exactly the same using its local copy; the backup is best-effort.</li>
         <li><strong>Clear App Data</strong> in Settings erases this backup along with your local data (your gem balance is deliberately preserved, since gems are purchased value).</li>
+      </ul>
+
+      <h2>Optional Pyramid Sync (Pyramids Plus)</h2>
+      <p>Tasks and pyramid stones stay on your device by default. If you have Pyramids Plus and explicitly enable Pyramid Sync, Pyramids stores the task and pyramid data needed to reproduce your workspace across your Apple devices in your private CloudKit database. This includes task titles, descriptions, notes, links, schedules and time zones, recurrence, priority, hierarchy and manual order, projects, tags, saved views, completion snapshots/history, archive and restore state, pyramid-stone titles, and stable record/change/deletion identifiers and timestamps.</p>
+      <ul>
+        <li>Pyramid Sync uses the iCloud account already signed in on the device. There is no Pyramids account, and Pyramids operates no application server for this data. Apple stores it in the user's private iCloud container.</li>
+        <li>The feature is off until enabled. Before the first sync, and after an iCloud account change, Pyramids shows what exists on the device and in iCloud and asks whether to merge or start from one copy.</li>
+        <li>Local task and gameplay actions continue while offline or while iCloud is unavailable. Changes wait on the device and retry later. If Pyramids Plus ends, local work continues and sync pauses without deleting either copy.</li>
+        <li>Turning Pyramid Sync off never deletes the current device. You choose whether to keep its CloudKit records for later or delete them from the original iCloud account. If deletion cannot finish immediately, Pyramids retains only the deletion request and retries without downloading task content when that account is reachable.</li>
+        <li>Reminder permission, scheduled notification ids, snoozes, Anthropic API keys, purchase receipts/entitlements, coins, gems, unrelated settings, analytics, and internal operation journals are not stored by Pyramid Sync. The limited automatic iCloud economy backup above remains separate.</li>
       </ul>
 
       <h2>Purchases (Pyramids Plus &amp; gems)</h2>
@@ -92,11 +112,11 @@
       <h2>Optional AI task breakdown</h2>
       <p>The app includes an <strong>optional</strong>, off-by-default feature that suggests how to break a task into smaller steps. If — and only if — you turn it on and provide your <strong>own</strong> Anthropic API key:</p>
       <ul>
-        <li>The text of the task you choose to break down is sent to Anthropic's API to generate suggested steps.</li>
-        <li>Your API key is stored securely on your device and is used to call Anthropic directly; usage is billed to your own Anthropic account.</li>
-        <li>We do not operate a server in this flow and do not receive or retain a copy of the request. Anthropic processes the task text and key under <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a> and the terms attached to your Anthropic account.</li>
+        <li>Only the title of the task you choose to break down is sent to Anthropic's API to generate suggested steps.</li>
+        <li>Your API key is stored securely on your device and is used to call Anthropic directly; the request is authenticated to and billed through your own Anthropic account.</li>
+        <li>We do not operate a server in this flow and do not receive or retain a copy of the request. Anthropic's current API retention and deletion rules apply under <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a> and the terms attached to your Anthropic account.</li>
       </ul>
-      <p>You can disable this feature and remove your key at any time in Settings.</p>
+      <p>You can disable this feature and remove your key at any time in Settings; either action stops future AI requests from Pyramids.</p>
 
       <h2>Children's privacy</h2>
       <p>The app is not directed at children under 13 and does not knowingly collect personal information from anyone.</p>
@@ -105,7 +125,7 @@
       <p>If this policy changes, the updated version will be posted at this URL with a new "last updated" date.</p>
 
       <h2>Contact</h2>
-      <p>Questions about this policy? Contact <a href="mailto:sgalloway111@gmail.com">sgalloway111@gmail.com</a>.</p>
+      <p>Questions about this policy? Contact: <strong><a href="mailto:sgalloway111@gmail.com">sgalloway111@gmail.com</a></strong></p>
     </div>
 
     <footer>
